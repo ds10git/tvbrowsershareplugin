@@ -16,6 +16,7 @@
     <string name="pref_export_category_info">Exported values</string>
     <string name="pref_export_message_contains_date">Date in message</string>
 	<string name="pref_export_message_contains_channel">Channel in message</string>
+	<string name="pref_export_description_type_title">Description type</string>
     <string-array name="pref_export_description_type_entries">
         <item>Short description</item>
         <item>Full description (if available)</item>

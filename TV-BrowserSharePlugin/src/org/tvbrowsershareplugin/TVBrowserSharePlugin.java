@@ -31,6 +31,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.preference.PreferenceManager;
 import android.text.format.DateFormat;
+import android.util.Log;
 
 /**
  * A service class that provides a share functionality for TV-Browser for Android.
@@ -183,6 +184,7 @@ public class TVBrowserSharePlugin extends Service {
 
     @Override
     public boolean hasPreferences() throws RemoteException {
+      Log.d("info24", "TVBSHARE hasPreferences() true" );
       return true;
     }
 
