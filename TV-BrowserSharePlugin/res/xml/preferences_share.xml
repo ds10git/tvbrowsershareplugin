@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference 
+        android:key="@string/PREF_SHARE_TARGET_ADDRESS"
+        android:title="@string/pref_share_title"
+        android:summary="@string/pref_share_summary"/>
+    <PreferenceCategory android:title="@string/pref_export_category_info">
+        <CheckBoxPreference
+            android:key="@string/PREF_SHARE_MESSAGE_CONTAINS_DATE"
+            android:title="@string/pref_export_message_contains_date"
+            android:defaultValue="@bool/pref_share_message_contains_date_default"/>
+        <CheckBoxPreference
+            android:key="@string/PREF_SHARE_MESSAGE_CONTAINS_CHANNEL"
+            android:title="@string/pref_export_message_contains_channel"
+            android:defaultValue="@bool/pref_share_message_contains_channel_default"/>
+        <ListPreference
+            android:key="@string/PREF_SHARE_DESCRIPTION_TYPE"
+            android:defaultValue="@string/pref_share_description_type_default"
+            android:entries="@array/pref_export_description_type_entries"
+            android:entryValues="@array/pref_simple_string_value_array2"
+            android:title="@string/pref_export_description_type_title"
+            android:summary="%s"/>
+    </PreferenceCategory>
+</PreferenceScreen>

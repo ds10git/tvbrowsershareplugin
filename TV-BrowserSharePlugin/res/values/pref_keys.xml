@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    	<!-- Email settings -->
+	
+		<string name="PREF_SHARE_TARGET_ADDRESS">PREF_SHARE_TARGET_ADDRESS</string>
+		
+		<string name="PREF_SHARE_MESSAGE_CONTAINS_DATE">PREF_SHARE_MESSAGE_CONTAINS_DATE</string>
+		<item name="pref_share_message_contains_date_default" type="bool" format="boolean">true</item>
+		
+		<string name="PREF_SHARE_MESSAGE_CONTAINS_CHANNEL">PREF_SHARE_MESSAGE_CONTAINS_CHANNEL</string>
+		<item name="pref_share_message_contains_channel_default" type="bool" format="boolean">true</item>
+	    
+		<string name="PREF_SHARE_DESCRIPTION_TYPE">PREF_SHARE_DESCRIPTION_TYPE</string>
+	    <item name="pref_share_description_type_default" type="string" format="string">0</item>
+</resources>
