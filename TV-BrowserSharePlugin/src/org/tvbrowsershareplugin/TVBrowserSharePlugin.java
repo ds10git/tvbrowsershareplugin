@@ -208,5 +208,10 @@ public class TVBrowserSharePlugin extends Service {
 
     @Override
     public void onDeactivation() throws RemoteException {}
+
+    @Override
+    public boolean isMarked(long programId) throws RemoteException {
+      return false;
+    }
   };
 }
