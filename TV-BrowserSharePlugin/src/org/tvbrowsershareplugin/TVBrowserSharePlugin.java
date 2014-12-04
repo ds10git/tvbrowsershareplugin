@@ -21,6 +21,7 @@ import java.util.List;
 
 import org.tvbrowser.devplugin.Channel;
 import org.tvbrowser.devplugin.Plugin;
+import org.tvbrowser.devplugin.PluginManager;
 import org.tvbrowser.devplugin.PluginMenu;
 import org.tvbrowser.devplugin.Program;
 
@@ -31,7 +32,6 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.preference.PreferenceManager;
 import android.text.format.DateFormat;
-import android.util.Log;
 
 /**
  * A service class that provides a share functionality for TV-Browser for Android.
@@ -41,19 +41,35 @@ import android.util.Log;
 public class TVBrowserSharePlugin extends Service {
   /* The id for the share PluginMenu */
   private static final int SHARE_MENU_ID = 1;
-  
-  /* The version of this Plugin */
-  private static final String VERSION = "0.1";
+    
+  /* The plugin manager of TV-Browser */
+  private PluginManager mPluginManager;
   
   @Override
   public IBinder onBind(Intent intent) {
     return getBinder;
   }
   
+  @Override
+  public boolean onUnbind(Intent intent) {
+    /* Don't keep instance of plugin manager*/
+    mPluginManager = null;
+    
+    return super.onUnbind(intent);
+  }
+  
+  @Override
+  public void onDestroy() {
+    /* Don't keep instance of plugin manager*/
+    mPluginManager = null;
+    
+    super.onDestroy();
+  }
+  
   private final Plugin.Stub getBinder = new Plugin.Stub() {
     @Override
     public String getVersion() throws RemoteException {
-      return VERSION;
+      return getString(R.string.version);
     }
 
     @Override
@@ -184,7 +200,6 @@ public class TVBrowserSharePlugin extends Service {
 
     @Override
     public boolean hasPreferences() throws RemoteException {
-      Log.d("info24", "TVBSHARE hasPreferences() true" );
       return true;
     }
 
@@ -192,6 +207,7 @@ public class TVBrowserSharePlugin extends Service {
     public void openPreferences(List<Channel> subscribedChannels) throws RemoteException {
       Intent startPref = new Intent(TVBrowserSharePlugin.this, TVBSharePluginPreferencesActivity.class);
       startPref.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      startPref.putExtra(TVBSharePluginPreferencesActivity.DARK_THEME_EXTRA_KEY, mPluginManager.getTvBrowserSettings().isUsingDarkTheme());
       startActivity(startPref);
     }
 
@@ -204,10 +220,15 @@ public class TVBrowserSharePlugin extends Service {
     public void handleFirstKnownProgramId(long programId) throws RemoteException {}
 
     @Override
-    public void onActivation() throws RemoteException {}
+    public void onActivation(PluginManager pluginManager) throws RemoteException {
+      mPluginManager = pluginManager;
+    }
 
     @Override
-    public void onDeactivation() throws RemoteException {}
+    public void onDeactivation() throws RemoteException {
+      /* Don't keep instance of plugin manager*/
+      mPluginManager = null;
+    }
 
     @Override
     public boolean isMarked(long programId) throws RemoteException {

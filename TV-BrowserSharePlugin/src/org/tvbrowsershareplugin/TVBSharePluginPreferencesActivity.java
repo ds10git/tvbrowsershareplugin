@@ -20,6 +20,7 @@ import java.util.List;
 
 import android.annotation.TargetApi;
 import android.os.Build;
+import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
 /**
@@ -28,6 +29,17 @@ import android.preference.PreferenceActivity;
  * @author René Mach
  */
 public class TVBSharePluginPreferencesActivity extends PreferenceActivity {
+  public static final String DARK_THEME_EXTRA_KEY = "DARK_THEME_EXTRA";
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    if(getIntent().getBooleanExtra(DARK_THEME_EXTRA_KEY, false)) {
+      setTheme(android.R.style.Theme_Holo);
+    }
+    
+    super.onCreate(savedInstanceState);
+  }
+  
   @Override
   public void onBuildHeaders(List<Header> target) {
     loadHeadersFromResource(R.xml.preferences_header, target);
@@ -40,7 +52,7 @@ public class TVBSharePluginPreferencesActivity extends PreferenceActivity {
   @Override
   @TargetApi(Build.VERSION_CODES.KITKAT)
   protected boolean isValidFragment(final String fragmentName) {
-    return "org.tvbrowser.settings.TvbPreferenceFragment".equals(fragmentName) ||
-      super.isValidFragment(fragmentName);
+    return TVBSharePluginPreferencesFragment.class.getCanonicalName().equals(fragmentName) || 
+        super.isValidFragment(fragmentName);
   }
 }
