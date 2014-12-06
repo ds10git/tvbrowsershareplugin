@@ -55,7 +55,9 @@ public class TVBrowserSharePlugin extends Service {
     /* Don't keep instance of plugin manager*/
     mPluginManager = null;
     
-    return super.onUnbind(intent);
+    stopSelf();
+    
+    return false;
   }
   
   @Override
