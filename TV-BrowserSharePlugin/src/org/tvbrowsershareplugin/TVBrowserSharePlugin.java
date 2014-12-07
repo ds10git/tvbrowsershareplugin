@@ -24,6 +24,7 @@ import org.tvbrowser.devplugin.Plugin;
 import org.tvbrowser.devplugin.PluginManager;
 import org.tvbrowser.devplugin.PluginMenu;
 import org.tvbrowser.devplugin.Program;
+import org.tvbrowser.devplugin.ReceiveTarget;
 
 import android.app.Service;
 import android.content.Intent;
@@ -236,5 +237,13 @@ public class TVBrowserSharePlugin extends Service {
     public boolean isMarked(long programId) throws RemoteException {
       return false;
     }
+
+    @Override
+    public ReceiveTarget[] getAvailableProgramReceiveTargets() throws RemoteException {
+      return null;
+    }
+
+    @Override
+    public void receivePrograms(Program[] programs, ReceiveTarget target) throws RemoteException {}
   };
 }
