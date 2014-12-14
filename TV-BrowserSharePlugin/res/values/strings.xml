@@ -4,6 +4,7 @@
     <string name="service_share_name">Share Plugin</string>
     <string name="service_share_description">Share programs with other people.</string>
 	<string name="service_share_context_menu">Share&#8230;</string>
+	<string name="service_share_only_title_context_menu">Share only title&#8230;</string>
 
 	<string name="service_share_pref_title">Share Plugin Preferences</string>
 	
@@ -21,6 +22,8 @@
         <item>Short description</item>
         <item>Full description (if available)</item>
     </string-array>
+    <string name="pref_export_only_title">Also only title</string>
+    <string name="pref_export_only_title_summary">Show additional context menu to only share the title of the program.</string>
     
     <string name="license"><![CDATA[<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software
   and associated documentation files (the "Software"), to use, copy, modify or merge the Software,

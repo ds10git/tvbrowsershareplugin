@@ -21,4 +21,9 @@
             android:title="@string/pref_export_description_type_title"
             android:summary="%s"/>
     </PreferenceCategory>
+    <CheckBoxPreference 
+        android:key="@string/PREF_SHARE_ONLY_TITLE_AVAILABLE"
+        android:title="@string/pref_export_only_title"
+        android:summary="@string/pref_export_only_title_summary"
+        android:defaultValue="@bool/pref_share_only_title_available_default"/>
 </PreferenceScreen>

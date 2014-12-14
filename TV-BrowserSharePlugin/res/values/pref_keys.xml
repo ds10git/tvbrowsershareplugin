@@ -12,4 +12,8 @@
 	    
 		<string name="PREF_SHARE_DESCRIPTION_TYPE">PREF_SHARE_DESCRIPTION_TYPE</string>
 	    <item name="pref_share_description_type_default" type="string" format="string">0</item>
+	    
+	    <string name="PREF_SHARE_ONLY_TITLE_AVAILABLE">PREF_SHARE_ONLY_TITLE_AVAILABLE</string>
+		<item name="pref_share_only_title_available_default" type="bool" format="boolean">true</item>
+	    
 </resources>

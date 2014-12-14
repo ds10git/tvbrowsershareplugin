@@ -3,6 +3,7 @@
 	<string name="service_share_name">Teilen-Plugin</string>
     <string name="service_share_description">Sendungen mit anderen Personen teilen.</string>
 	<string name="service_share_context_menu">Teilen&#8230;</string>
+	<string name="service_share_only_title_context_menu">Nur Titel teilen&#8230;</string>
 	
 	<string name="service_share_pref_title">Teilen-Plugin Einstellungen</string>
 	
@@ -20,6 +21,9 @@
         <item>Kurzbeschreibung</item>
         <item>Vollständige Beschreibung (wenn vorhanden)</item>
     </string-array>
+    <string name="pref_export_only_title">Auch ohne Titel</string>
+    <string name="pref_export_only_title_summary">Zusätzliches Kontextmenü anbieten, mit dem nur der Titel der Sendung geteilt werden kann.</string>
+    
     
     <string name="license"><![CDATA[<p>Hiermit wird unentgeltlich, jeder Person, die eine Kopie der Software und der zugehörigen Dokumentationen (die "Software") erhält,
   die Erlaubnis erteilt, sie zu verwenden, kopieren, ändern oder zu fusionieren, darüber hinaus sie unverändert und unentgeltlich zu verlegen und zu verbreiten

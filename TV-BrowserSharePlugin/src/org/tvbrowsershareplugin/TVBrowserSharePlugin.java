@@ -42,7 +42,10 @@ import android.text.format.DateFormat;
 public class TVBrowserSharePlugin extends Service {
   /* The id for the share PluginMenu */
   private static final int SHARE_MENU_ID = 1;
-    
+  
+  /* The id for the share only title PluginMenu */
+  private static final int SHARE_ONLY_TITLE_MENU_ID = 2;    
+  
   /* The plugin manager of TV-Browser */
   private PluginManager mPluginManager;
   
@@ -176,6 +179,15 @@ public class TVBrowserSharePlugin extends Service {
       
       Intent sendIntent = new Intent();
       sendIntent.setAction(Intent.ACTION_SEND);
+      
+      if(pluginMenu.getId() == SHARE_ONLY_TITLE_MENU_ID) {
+        subject.delete(0, subject.length());
+        subject.append(program.getTitle());
+        
+        message.delete(0, message.length());
+        message.append(program.getTitle());
+      }
+      
       sendIntent.putExtra(Intent.EXTRA_TEXT, message.toString());
       sendIntent.putExtra(Intent.EXTRA_SUBJECT, subject.toString());
       
@@ -196,9 +208,25 @@ public class TVBrowserSharePlugin extends Service {
     
     @Override
     public PluginMenu[] getContextMenuActionsForProgram(Program program) throws RemoteException {
+      PluginMenu[] result = null;
+      
       PluginMenu share = new PluginMenu(SHARE_MENU_ID, getString(R.string.service_share_context_menu));
       
-      return new PluginMenu[] {share};
+      if(PreferenceManager.getDefaultSharedPreferences(TVBrowserSharePlugin.this).getBoolean(getString(R.string.PREF_SHARE_ONLY_TITLE_AVAILABLE), getResources().getBoolean(R.bool.pref_share_only_title_available_default))) {
+        PluginMenu shareOnlyTitle = new PluginMenu(SHARE_ONLY_TITLE_MENU_ID, getString(R.string.service_share_only_title_context_menu));
+        
+        result = new PluginMenu[] {
+          share,
+          shareOnlyTitle
+        };
+      }
+      else {
+        result = new PluginMenu[] {
+          share
+        };
+      }
+      
+      return result;
     }
 
     @Override
