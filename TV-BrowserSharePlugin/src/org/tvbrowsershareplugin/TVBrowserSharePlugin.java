@@ -238,7 +238,11 @@ public class TVBrowserSharePlugin extends Service {
     public void openPreferences(List<Channel> subscribedChannels) throws RemoteException {
       Intent startPref = new Intent(TVBrowserSharePlugin.this, TVBSharePluginPreferencesActivity.class);
       startPref.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-      startPref.putExtra(TVBSharePluginPreferencesActivity.DARK_THEME_EXTRA_KEY, mPluginManager.getTvBrowserSettings().isUsingDarkTheme());
+      
+      if(mPluginManager != null) {
+        startPref.putExtra(TVBSharePluginPreferencesActivity.DARK_THEME_EXTRA_KEY, mPluginManager.getTvBrowserSettings().isUsingDarkTheme());
+      }
+      
       startActivity(startPref);
     }
 
