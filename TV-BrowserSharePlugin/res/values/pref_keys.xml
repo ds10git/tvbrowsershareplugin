@@ -15,5 +15,7 @@
 	    
 	    <string name="PREF_SHARE_ONLY_TITLE_AVAILABLE">PREF_SHARE_ONLY_TITLE_AVAILABLE</string>
 		<item name="pref_share_only_title_available_default" type="bool" format="boolean">true</item>
-	    
+		
+	    <string name="PREF_SHARE_MARK_PROGRAMS">PREF_SHARE_MARK_PROGRAMS</string>
+		<item name="pref_share_mark_programs_default" type="bool" format="boolean">true</item>
 </resources>

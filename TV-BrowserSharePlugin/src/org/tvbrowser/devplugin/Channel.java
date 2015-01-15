@@ -120,6 +120,9 @@ public final class Channel implements Parcelable {
       mChannelIcon = new byte[iconSize];
       source.readByteArray(mChannelIcon);
     }
+    else {
+      mChannelIcon = null;
+    }
   }
   
   @Override
@@ -128,6 +131,9 @@ public final class Channel implements Parcelable {
     dest.writeInt(mId);
     dest.writeString(mChannelName);
     dest.writeInt((mChannelIcon != null ? mChannelIcon.length : 0));
-    dest.writeByteArray(mChannelIcon);
+    
+    if(mChannelIcon != null) {
+      dest.writeByteArray(mChannelIcon);
+    }
   }
 }

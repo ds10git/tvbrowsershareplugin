@@ -4,6 +4,12 @@
         android:key="@string/PREF_SHARE_TARGET_ADDRESS"
         android:title="@string/pref_share_title"
         android:summary="@string/pref_share_summary"/>
+    <PreferenceCategory android:title="@string/pref_export_category_mark">
+        <CheckBoxPreference
+            android:key="@string/PREF_SHARE_MARK_PROGRAMS"
+            android:title="@string/pref_export_mark_title"
+            android:defaultValue="@bool/pref_share_mark_programs_default"/>
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_export_category_info">
         <CheckBoxPreference
             android:key="@string/PREF_SHARE_MESSAGE_CONTAINS_DATE"

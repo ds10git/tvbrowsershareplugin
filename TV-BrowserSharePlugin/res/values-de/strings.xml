@@ -4,6 +4,7 @@
     <string name="service_share_description">Sendungen mit anderen Personen teilen.</string>
 	<string name="service_share_context_menu">Teilen&#8230;</string>
 	<string name="service_share_only_title_context_menu">Nur Titel teilen&#8230;</string>
+	<string name="service_share_context_menu_remove_marking">Markierung für Teilen&#8230; entfernen</string>
 	
 	<string name="service_share_pref_title">Teilen-Plugin Einstellungen</string>
 	
@@ -14,6 +15,8 @@
     <string name="pref_category_email">E-Mail</string>
 	
 	<string name="pref_export_category_info">Zu übertragende Informationen</string>
+	<string name="pref_export_category_mark">Markierungen</string>
+    <string name="pref_export_mark_title">Geteilte Sendungen markieren</string>
 	<string name="pref_export_message_contains_date">Datum in Nachricht</string>
 	<string name="pref_export_message_contains_channel">Sender in Nachricht</string>
     <string name="pref_export_description_type_title">Beschreibungstyp</string>

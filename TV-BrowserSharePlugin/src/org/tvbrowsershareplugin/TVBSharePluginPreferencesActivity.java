@@ -30,7 +30,7 @@ import android.preference.PreferenceActivity;
  */
 public class TVBSharePluginPreferencesActivity extends PreferenceActivity {
   public static final String DARK_THEME_EXTRA_KEY = "DARK_THEME_EXTRA";
-
+  
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     if(getIntent().getBooleanExtra(DARK_THEME_EXTRA_KEY, false)) {
