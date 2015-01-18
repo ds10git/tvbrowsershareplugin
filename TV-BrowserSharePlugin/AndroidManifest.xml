@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.tvbrowsershareplugin"
-    android:versionCode="8"
+    android:versionCode="9"
     android:versionName="@string/version" >
 
     <uses-sdk
@@ -15,12 +15,11 @@
         android:theme="@style/AppTheme" >
         <service
             android:name=".TVBrowserSharePlugin"
-            android:label="1"
+            android:label="3"
             android:permission="org.tvbrowser.permission.BIND_PLUGIN"
             android:exported="true">
             <intent-filter>
                 <action android:name="org.tvbrowser.intent.action.PLUGIN"/>
-                <category android:name="org.tvbrowser.intent.category.TVBrowserSharePlugin"/>
             </intent-filter>
 
         </service>
