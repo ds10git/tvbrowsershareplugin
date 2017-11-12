@@ -1,4 +1,5 @@
 <resources>
+    <string name="info">Diese App ist ein Plugin für die App TV-Browser.\n\nSie kann nur innerhalb von TV-Browser benutzt werden.</string>
     <string name="app_name">TV-Browser Teilen-Plugin</string>
 	<string name="service_share_name">Teilen-Plugin</string>
     <string name="service_share_description">Sendungen mit anderen Personen teilen.</string>

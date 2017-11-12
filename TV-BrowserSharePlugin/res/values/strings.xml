@@ -1,5 +1,6 @@
 <resources>
 
+    <string name="info">This app is a plugin for the app TV-Browser.\n\nIt cannot be used outside of TV-Browser.</string>
     <string name="app_name">TV-Browser Share Plugin</string>
     <string name="service_share_name">Share Plugin</string>
     <string name="service_share_description">Share programs with other people.</string>
