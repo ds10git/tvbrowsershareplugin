@@ -1,0 +1,41 @@
+<resources>
+
+    <string name="app_name">TV-Browser Share Plugin</string>
+    <string name="service_share_name">Share Plugin</string>
+    <string name="service_share_description">Share programs with other people.</string>
+	<string name="service_share_context_menu">Share&#8230;</string>
+	<string name="service_share_only_title_context_menu">Share only title&#8230;</string>
+	<string name="service_share_context_menu_remove_marking">Remove share&#8230; marking</string>
+
+	<string name="service_share_pref_title">Share Plugin Preferences</string>
+	
+	<string name="pref_title">Preferences</string>
+		
+	<string name="pref_share_title">To email address</string>
+    <string name="pref_share_summary">Email address for sending program information.</string>
+    <string name="pref_category_email">Email</string>
+    <string name="pref_export_category_mark">Markings</string>
+    <string name="pref_export_mark_title">Mark shared programs</string>
+    <string name="pref_export_category_info">Exported values</string>
+    <string name="pref_export_message_contains_date">Date in message</string>
+	<string name="pref_export_message_contains_channel">Channel in message</string>
+	<string name="pref_export_description_type_title">Description type</string>
+    <string-array name="pref_export_description_type_entries">
+        <item>Short description</item>
+        <item>Full description (if available)</item>
+    </string-array>
+    <string name="pref_export_only_title">Also only title</string>
+    <string name="pref_export_only_title_summary">Show additional context menu to only share the title of the program.</string>
+    
+    <string name="license"><![CDATA[<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+  and associated documentation files (the "Software"), to use, copy, modify or merge the Software,
+  furthermore to publish and distribute the Software free of charge without modifications and to permit persons
+  to whom the Software is furnished to do so, subject to the following conditions:</p>
+ 
+  <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+ 
+  <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+  OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+  LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>]]></string>
+</resources>

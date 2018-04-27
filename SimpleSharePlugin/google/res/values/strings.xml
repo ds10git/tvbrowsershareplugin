@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="info">This app is a plugin for the app TV-Browser.\n\nIt cannot be used outside of TV-Browser.</string>
+</resources>

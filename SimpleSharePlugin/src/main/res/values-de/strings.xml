@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">TV-Browser Teilen-Plugin</string>
+	<string name="service_share_name">Teilen-Plugin</string>
+    <string name="service_share_description">Sendungen mit anderen Personen teilen.</string>
+	<string name="service_share_context_menu">Teilen&#8230;</string>
+	<string name="service_share_only_title_context_menu">Nur Titel teilen&#8230;</string>
+	<string name="service_share_context_menu_remove_marking">Markierung für Teilen&#8230; entfernen</string>
+	
+	<string name="service_share_pref_title">Teilen-Plugin Einstellungen</string>
+	
+	<string name="pref_title">Einstellungen</string>
+	
+	<string name="pref_share_title">Empfänger E-Mail Adresse</string>
+	<string name="pref_share_summary">E-Mail Adresse für das Versenden von Programminformationen.</string>
+    <string name="pref_category_email">E-Mail</string>
+	
+	<string name="pref_export_category_info">Zu übertragende Informationen</string>
+	<string name="pref_export_category_mark">Markierungen</string>
+    <string name="pref_export_mark_title">Geteilte Sendungen markieren</string>
+	<string name="pref_export_message_contains_date">Datum in Nachricht</string>
+	<string name="pref_export_message_contains_channel">Sender in Nachricht</string>
+    <string name="pref_export_description_type_title">Beschreibungstyp</string>
+    <string-array name="pref_export_description_type_entries">
+        <item>Kurzbeschreibung</item>
+        <item>Vollständige Beschreibung (wenn vorhanden)</item>
+    </string-array>
+    <string name="pref_export_only_title">Auch ohne Titel</string>
+    <string name="pref_export_only_title_summary">Zusätzliches Kontextmenü anbieten, mit dem nur der Titel der Sendung geteilt werden kann.</string>
+    
+    
+    <string name="license"><![CDATA[<p>Hiermit wird unentgeltlich, jeder Person, die eine Kopie der Software und der zugehörigen Dokumentationen (die "Software") erhält,
+  die Erlaubnis erteilt, sie zu verwenden, kopieren, ändern oder zu fusionieren, darüber hinaus sie unverändert und unentgeltlich zu verlegen und zu verbreiten
+  und Personen, die diese Software erhalten, diese Rechte zu geben, unter den folgenden Bedingungen:</p>
+
+  <p>Der obige Urheberrechtsvermerk und dieser Erlaubnisvermerk sind in allen Kopien oder Teilkopien der Software beizulegen.</p>
+
+  <p>DIE SOFTWARE WIRD OHNE JEDE AUSDRÜCKLICHE ODER IMPLIZIERTE GARANTIE BEREITGESTELLT, EINSCHLIESSLICH
+  DER GARANTIE ZUR BENUTZUNG FÜR DEN VORGESEHENEN ODER EINEM BESTIMMTEN ZWECK SOWIE JEGLICHER RECHTSVERLETZUNG,
+  JEDOCH NICHT DARAUF BESCHRÄNKT. IN KEINEM FALL SIND DIE AUTOREN ODER COPYRIGHTINHABER FÜR JEGLICHEN SCHADEN
+  ODER SONSTIGE ANSPRÜCHE HAFTBAR ZU MACHEN, OB INFOLGE DER ERFÜLLUNG EINES VERTRAGES, EINES DELIKTES ODER
+  ANDERS IM ZUSAMMENHANG MIT DER SOFTWARE ODER SONSTIGER VERWENDUNG DER SOFTWARE ENTSTANDEN.</p>]]></string>
+</resources>
